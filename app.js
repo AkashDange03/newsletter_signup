@@ -11,7 +11,7 @@ const { urlToHttpOptions } = require("url");
 
 const app = express();
 
-app.use(express.static("public"));//static folder to acess css and image files
+app.use(express.static( __dirname + "/public"));//static folder to acess css and image files
 app.use(bodyparser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
