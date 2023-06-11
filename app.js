@@ -9,9 +9,12 @@ const { json } = require("body-parser");
 const { url } = require("inspector");
 const { urlToHttpOptions } = require("url");
 
+const path = require("path")
+
 const app = express();
 
-app.use(express.static("public"));//static folder to acess css and image files
+
+app.use(express.static(path.join(__dirname,"/public")));//static folder to acess css and image files
 
 app.use(bodyparser.urlencoded({ extended: true }));
 
